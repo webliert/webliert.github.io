@@ -1,0 +1,66 @@
+/*
+  Webliert Homepage — Theme Variables
+
+  默认暗色玻璃拟态主题。
+  切换亮色主题由 JS 设置 html[data-theme="Light"] 触发。
+
+  变量说明：
+  --main_bg_color         页面背景
+  --main_text_color       主文本色
+  --gradient              标题渐变色
+  --purple_text_color     高亮文本色
+  --text_bg_color         高亮文本背景色
+  --item_bg_color         玻璃卡片底色（建议带 alpha）
+  --item_hover_color      卡片悬浮底色
+  --item_left_title_color 卡片标题色
+  --item_left_text_color  卡片描述色
+  --footer_text_color     底部文本色
+  --left_tag_item         左侧标签底色
+  --card_filter           玻璃模糊半径 (0 = 不模糊)
+  --back_filter           背景模糊半径 (0 = 不模糊)
+  --back_filter_color     背景遮罩色
+  --glass_border          玻璃边框色
+  --fill                  SVG 默认填充色
+*/
+
+/* === 默认暗色主题（玻璃拟态） === */
+:root {
+  --main_bg_color: url(../img/background.png), radial-gradient(circle at 20% 10%, #1e1b4b 0%, #0a0a1a 50%, #000000 100%);
+  --main_text_color: #e8e8f0;
+  --gradient: linear-gradient(120deg, #00d4ff 0%, #7c3aed 40%, #ec4899 80%);
+  --purple_text_color: #7dd3fc;
+  --text_bg_color: rgba(124, 58, 237, 0.18);
+  --item_bg_color: rgba(255, 255, 255, 0.05);
+  --item_hover_color: rgba(255, 255, 255, 0.1);
+  --item_left_title_color: #ffffff;
+  --item_left_text_color: #b8c5d6;
+  --footer_text_color: #6b7280;
+  --left_tag_item: rgba(255, 255, 255, 0.08);
+  --card_filter: 18px;
+  --back_filter: 0px;
+  --back_filter_color: rgba(5, 5, 20, 0.6);
+  --glass_border: rgba(255, 255, 255, 0.12);
+  --glass_shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --fill: #ffffff;
+}
+
+/* === 亮色主题（可选切换） === */
+html[data-theme="Light"] {
+  --main_bg_color: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+  --main_text_color: #1f2937;
+  --gradient: linear-gradient(120deg, #00d4ff 0%, #7c3aed 40%, #ec4899 80%);
+  --purple_text_color: #6366f1;
+  --text_bg_color: rgba(124, 58, 237, 0.1);
+  --item_bg_color: rgba(255, 255, 255, 0.55);
+  --item_hover_color: rgba(255, 255, 255, 0.85);
+  --item_left_title_color: #111827;
+  --item_left_text_color: #4b5563;
+  --footer_text_color: #6b7280;
+  --left_tag_item: rgba(124, 58, 237, 0.1);
+  --card_filter: 18px;
+  --back_filter: 0px;
+  --back_filter_color: rgba(255, 255, 255, 0.3);
+  --glass_border: rgba(255, 255, 255, 0.7);
+  --glass_shadow: 0 8px 32px rgba(124, 58, 237, 0.12);
+  --fill: #1f2937;
+}

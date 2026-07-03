@@ -1,0 +1,166 @@
+# ============================================================
+# Webliert.github.io - .gitignore
+# 忽略构建产物、依赖、临时文件，但保留所有需要部署到 GitHub Pages 的静态文件
+# ============================================================
+
+# -------- VitePress 博客构建中间产物 --------
+# 这些是 VitePress 运行时产生的不需要入库的缓存和中间输出
+blog/node_modules/
+blog/docs/.vitepress/cache/
+blog/docs/.vitepress/dist/
+
+# 注意：blog/index.html / blog/about.html / blog/posts/ / blog/assets/
+# 这些是构建最终产物，会被 copy-dist.mjs 复制到 blog/ 根，**不要忽略**，
+# GitHub Pages 需要它们来提供 /blog/ 路径的服务。
+
+# -------- Node / npm --------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+node_modules/
+.pnpm-store/
+
+# -------- Python --------
+# 项目里用了 python3 -m http.server 和生成占位图的脚本
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 虚拟环境
+.venv/
+venv/
+ENV/
+env/
+.python-version
+
+# 测试 / 类型检查
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# Jupyter
+.ipynb_checkpoints/
+profile_default/
+
+# -------- 操作系统 --------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_view.db
+$RECYCLE.BIN/
+Desktop.ini
+System Volume Information/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.Trash-*
+.nfs*
+
+# -------- 编辑器 / IDE --------
+# VSCode（如果想同步设置，可以单独跟踪 .vscode/settings.json）
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse / MyEclipse
+.project
+.classpath
+.settings/
+.loadpath
+.recommenders/
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+.\#*
+\#*\#
+.*.sw[a-p]
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# -------- 环境变量 / 密钥 --------
+# 永远不要把 .env 文件提交到仓库
+.env
+.env.local
+.env.*.local
+
+# -------- 临时文件 / 备份 --------
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+*.patch
+*.old
+
+# 日志
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# 压缩包（避免误提交下载的东西）
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
